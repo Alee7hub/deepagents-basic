@@ -1,0 +1,147 @@
+.goal-input-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.info-box {
+  background: rgba(0, 217, 255, 0.08);
+  border-left: 4px solid #00d9ff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  box-shadow: 0 4px 10px rgba(0, 217, 255, 0.1);
+}
+
+.info-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  color: #00d9ff;
+}
+
+.info-box p {
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.goal-form {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #00d9ff;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+
+.goal-textarea,
+.time-select,
+.custom-time-input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 2px solid rgba(0, 217, 255, 0.3);
+  border-radius: 8px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  background: rgba(15, 23, 42, 0.8);
+  color: #e0e7ff;
+}
+
+.goal-textarea:focus,
+.time-select:focus,
+.custom-time-input:focus {
+  outline: none;
+  border-color: #00d9ff;
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
+}
+
+.goal-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.time-select {
+  cursor: pointer;
+}
+
+.generate-button {
+  width: 100%;
+  background: linear-gradient(135deg, #00d9ff 0%, #0ea5e9 100%);
+  color: #0a0e27;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.generate-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 217, 255, 0.5);
+}
+
+.generate-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.generate-button.loading {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .goal-form {
+    padding: 1.5rem;
+  }
+
+  .form-label {
+    font-size: 1rem;
+  }
+
+  .generate-button {
+    font-size: 1rem;
+    padding: 0.875rem 1.5rem;
+  }
+}
