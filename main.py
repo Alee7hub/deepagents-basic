@@ -43,7 +43,7 @@ model = init_chat_model("openai:gpt-4o-mini")
 composite_backend = lambda rt: CompositeBackend(
     default=StateBackend(rt),
     routes={
-        "/memories/": FilesystemBackend(root_dir="/Users/lida/Documents/Alis/projects/deepagent/backend/memories/", virtual_mode=True),
+        "/memories/": FilesystemBackend(root_dir="path/to/your/project/deepagent/backend/memories", virtual_mode=True),
     },
 )
 
@@ -59,7 +59,7 @@ def main(user_query):
     agent.invoke({"messages": [{"role": "user", "content": user_query}]})
     
     # Read and return the generated report
-    report_path = "/Users/lida/Documents/Alis/projects/deepagent/backend/memories/report.md"
+    report_path = "path/to/your/project/deepagent/backend/memories/report.md"
     try:
         with open(report_path, 'r') as f:
             return f.read()
